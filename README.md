@@ -91,15 +91,15 @@ Contributions to improve the script are welcome. Please follow these steps:
 5. Create the pull request.
 
 ## New Feature Ideas 💡
-1. Multi-platform Job Scraping:
+1. **Multi-platform Job Scraping:**
     - Expand the scraper to work with other job platforms like Indeed, Glassdoor, or Monster. This would allow users to aggregate job listings from multiple sources in one sheet.
-2. Automatic Application Tracking:
+2. **Automatic Application Tracking:**
     - Implement a feature that automatically updates the "Date Applied" and "Status" columns based on user-defined triggers or actions. For example, it could mark a job as "Applied" when the user clicks a specific button or after a certain time has passed.
-3. Job Recommendation System:
+3. **Job Recommendation System:**
     - Analyze the scraped job descriptions and the user's resume/skills (which could be stored in a separate sheet) to provide a matching score or recommendation for each job listing. This could help users prioritize which jobs to apply for.
-4. Email Notifications:
+4. **Email Notifications:**
     - Set up an email notification system that alerts the user when new jobs matching their criteria are added to the sheet, or when it's time to follow up on an application based on the application date.
-5. Data Visualization Dashboard:
+5. **Data Visualization Dashboard:**
     - Create a separate sheet or a Google Data Studio dashboard that visualizes the job search progress. This could include charts showing application status distribution, timeline of applications, most common skills required in the job listings, etc.
 
 ## License
