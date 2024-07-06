@@ -10,6 +10,7 @@ This Python script automates the process of scraping job details from LinkedIn j
 - Updates a Google Sheet with the scraped information
 - Implements measures to bypass basic scraping protections
 - Uses Google Sheets API for seamless integration
+- Implements measures to bypass basic scraping protections
 
 ## Prerequisites
 
@@ -18,13 +19,14 @@ Before you begin, ensure you have met the following requirements:
 - Python 3.6 or higher installed
 - A Google Cloud Platform account with Google Sheets API enabled
 - A service account key file (JSON) for Google Sheets API authentication
+- A Sheet ID
 
 ## Installation
 
 1. Clone this repository:
    ```
-   git clone https://github.com/your-username/linkedin-job-scraper.git
-   cd linkedin-job-scraper
+   git clone https://github.com/ramunasnognys/LinkedInToSheets.git
+   cd LinkedInToSheets
    ```
 
 2. Install the required Python packages:
@@ -60,13 +62,17 @@ Before you begin, ensure you have met the following requirements:
 
 2. When prompted, enter the full LinkedIn job posting URL.
 
-3. The script will scrape the job details and update your Google Sheet with the information.
+3. The script will:
+    - Read all data from your Google Sheet
+    - Skip rows that already have content in columns A-F
+    - For empty rows, scrape data for the URL in column G if it's valid
+    - Update the sheet with the new information for empty rows only
 
 ## How It Works
-
-1. The script uses `requests` and `BeautifulSoup` to scrape job details from the LinkedIn job posting.
+1. The script uses requests and BeautifulSoup to scrape job details from LinkedIn job postings.
 2. It implements measures to bypass basic scraping protections, such as random user agents and request delays.
 3. The scraped data is then formatted and sent to the specified Google Sheet using the Google Sheets API.
+4. Existing data in the sheet is preserved, and only empty rows are updated with new information.
 
 ## Limitations
 
